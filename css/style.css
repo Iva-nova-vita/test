@@ -321,35 +321,38 @@ body {
   text-decoration: underline; }
 
 header {
-  height: 106px; }
+  height: 155px; }
 
-header .flex_wrap {
+header > .flex_wrap {
   align-items: center; }
-  header .flex_wrap > :nth-child(2) {
+  header > .flex_wrap > :nth-child(2) {
     width: 35%;
     text-align: center;
     padding: 0 5px; }
-  header .flex_wrap > :nth-child(3) {
+  header > .flex_wrap > :nth-child(3) {
     width: 15%;
     text-align: end;
-    padding: 0 5px;
+    padding-left: 5px;
     padding-top: 25px;
     align-self: flex-start; }
-  header .flex_wrap > :nth-child(4) {
+  header > .flex_wrap > :nth-child(4) {
     width: 20%;
     text-align: end;
     padding-right: 10px;
     padding-top: 25px;
     align-self: flex-start; }
-    header .flex_wrap > :nth-child(4) a {
+    header > .flex_wrap > :nth-child(4) a {
       padding-right: 10px; }
-  header .flex_wrap > :nth-child(5) {
+  header > .flex_wrap > :nth-child(5) {
     width: 5%; }
 
 .tel {
   font-size: 16px;
   line-height: 19px;
-  font-weight: 600; }
+  font-weight: 600;
+  display: inline-block;
+  vertical-align: middle;
+  height: 30px; }
 
 #inShoppingBag a {
   position: relative; }
@@ -364,6 +367,104 @@ header .flex_wrap {
   font-size: 12px;
   border-radius: 100%;
   color: white;
-  background-color: #1AB0CE;
+  background-color: #1ab0ce;
   text-align: center;
   line-height: 28px; }
+
+nav {
+  margin-top: -4px;
+  height: 60px;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.05) inset; }
+  nav ul {
+    padding: 0;
+    list-style-type: none;
+    width: 100%; }
+    nav ul li {
+      padding: 18px 0;
+      text-align: center; }
+      nav ul li:hover {
+        border-top: 1px solid #1ab0ce;
+        cursor: pointer; }
+        nav ul li:hover a {
+          color: #1ab0ce; }
+      nav ul li a {
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 600; }
+    nav ul > :nth-child(1) {
+      width: 10%;
+      text-align: start; }
+    nav ul > :nth-child(2) {
+      width: 15%;
+      position: relative; }
+      nav ul > :nth-child(2) img {
+        position: absolute;
+        left: 0; }
+    nav ul > :nth-child(3) {
+      width: 20%;
+      position: relative; }
+      nav ul > :nth-child(3) img {
+        position: absolute;
+        left: 0; }
+    nav ul > :nth-child(4) {
+      width: 13%;
+      position: relative; }
+      nav ul > :nth-child(4) img {
+        position: absolute;
+        left: 0; }
+    nav ul > :nth-child(5) {
+      width: 15%;
+      position: relative; }
+      nav ul > :nth-child(5) img {
+        position: absolute;
+        left: 0; }
+    nav ul > :nth-child(6) {
+      width: 10%;
+      position: relative; }
+      nav ul > :nth-child(6) img {
+        position: absolute;
+        left: 0; }
+    nav ul > :nth-child(7) {
+      width: 12%;
+      position: relative; }
+      nav ul > :nth-child(7) img {
+        position: absolute;
+        left: 0; }
+    nav ul > :nth-child(8) {
+      width: 5%;
+      text-align: end;
+      position: relative; }
+      nav ul > :nth-child(8) > img {
+        position: absolute;
+        left: 0; }
+
+#main_banner {
+  background-image: url(../images/Rectangle.png);
+  height: 500px;
+  text-align: center;
+  background-position: top; }
+  #main_banner h1 {
+    font-size: 57px;
+    line-height: 67px;
+    margin: 0px;
+    padding-top: 153px;
+    color: #FFFFFF; }
+  #main_banner h2 {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 500;
+    color: #FFFFFF; }
+  #main_banner a {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 33px;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    padding-top: 15px;
+    background-color: #1ab0ce;
+    border-radius: 2px;
+    color: #FFFFFF; }
