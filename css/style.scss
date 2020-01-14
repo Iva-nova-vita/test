@@ -17,14 +17,45 @@ body {
 }
 header {
   height: 155px;
+  @media screen and (max-width: 1200px) {
+    & {
+        height: 85px;
+    }
+  }
 }
 header > .flex_wrap {
   align-items: center;
+  
 
+  > :nth-child(1) {
+  @media screen and (min-width: 451px) and (max-width: 670px) {
+    & {
+      width: 50%;
+    }
+    img {
+width: 210px;
+padding-top: 15px;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    & {
+      width: 40%;
+    }
+    img {
+        width: 190px;
+        padding-top: 15px;
+            }
+  }
+  }
   > :nth-child(2) {
     width: 35%;
     text-align: center;
     padding: 0 5px;
+    @media screen and (max-width: 1200px) {
+        & {
+          display: none;
+        }
+      }
   }
   > :nth-child(3) {
     width: 15%;
@@ -32,6 +63,25 @@ header > .flex_wrap {
     padding-left: 5px;
     padding-top: 25px;
     align-self: flex-start;
+    img {
+        width: 14px;
+    }
+    @media screen and (min-width: 451px ) and (max-width: 1200px) {
+        & {
+            width: 18%;
+        }
+      }
+      @media screen and (max-width: 450px) {
+        & {
+            width: 22%;
+        }
+        a[class="underline"] {
+    display: none;
+        }
+        img {
+            width: 20px;
+        }
+      }
   }
   > :nth-child(4) {
     width: 20%;
@@ -42,9 +92,31 @@ header > .flex_wrap {
     a {
       padding-right: 10px;
     }
+    @media screen and (max-width: 1200px) {
+        & {
+          display: none;
+        }
+      }
   }
   > :nth-child(5) {
     width: 5%;
+      @media screen and (min-width: 451px ) and (max-width: 1200px) {
+        & {
+            width: 15%;
+        }
+      }
+      @media screen and (max-width: 450px) {
+        & {
+            width: 18%;
+        }
+        img {
+            width: 28px;
+        }
+      }
+
+
+
+     
   }
 }
 #show_phones_header {
@@ -56,7 +128,6 @@ header > .flex_wrap {
       right: -32px;
       display: block;
       z-index: 10;
-      
     }
   }
 }
@@ -88,11 +159,25 @@ header > .flex_wrap {
   background-color: #1ab0ce;
   text-align: center;
   line-height: 28px;
+  @media screen and (max-width: 450px) {
+    & {
+        top: -20px;
+  left: 20px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+    }
+  }
 }
 nav {
   margin-top: -4px;
   height: 60px;
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.05) inset;
+  @media screen and (max-width: 1200px) {
+    & {
+      display: none;
+    }
+  }
 
   ul {
     padding: 0;
@@ -117,6 +202,7 @@ nav {
         text-align: center;
         text-transform: uppercase;
         font-weight: 600;
+       
       }
     }
     > :nth-child(1) {
@@ -182,6 +268,38 @@ nav {
     }
   }
 }
+#menu__toggle {
+  opacity: 0;
+}
+.menu__btn {
+  position: absolute;
+  right: 1%;
+  width: 27px;
+  height: 27px;
+  display: inline-block;
+  visibility: hidden;
+  cursor: pointer;
+
+  @media screen and (max-width: 1200px) {
+    & {
+      visibility: visible;
+    }
+  }
+
+  span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 27px;
+    background-color: black;
+    &:nth-child(2) {
+      top: 9px;
+    }
+    &:nth-child(3) {
+      top: 18px;
+    }
+  }
+}
 #main_banner {
   background-image: url(../images/Rectangle.png);
   height: 500px;
@@ -190,10 +308,20 @@ nav {
   position: relative;
   h1 {
     font-size: 57px;
-    line-height: 67px;
     margin: 0px;
     padding-top: 153px;
     color: #ffffff;
+    @media screen and (min-width: 451px) and (max-width: 670px) {
+        & {
+            font-size: 40px;
+        }
+    }
+    @media screen and (max-width: 451px) {
+        & {
+            font-size: 30px;
+
+        }
+    }
   }
   h2 {
     font-size: 24px;
@@ -232,6 +360,7 @@ h2 {
 }
 
 #about_us {
+    padding: 0 10px;
   h3 {
     font-size: 24px;
     line-height: 28px;
@@ -247,18 +376,41 @@ h2 {
     color: #3a4047;
   }
 }
+#products >.flex_wrap {
+    @media screen and (max-width: 670px) {
+        & {
+            flex-direction: column;
+            align-items: center;
+
+        }
+    }
+}
 .products {
   height: 291px;
   width: 32%;
+  margin-top: 10px;
   border: 1px solid #dce1e6;
   box-sizing: border-box;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
+  @media screen and (max-width: 670px) {
+    & {
+        width: 70%;
+
+    }
+}
   img {
-    margin: 25px;
+    margin: 18px;
+    @media screen  and (max-width: 770px) {
+        & {
+            margin: 8px;
+            width: 30px;
+        }
+    }
+    
   }
 }
 .catalog {
-  width: 70%;
+  width: 75%;
 
   h3 {
     font-size: 16px;
@@ -273,6 +425,7 @@ h2 {
   flex-direction: column;
   flex-wrap: wrap;
   height: 250px;
+  
 
   a {
     font-size: 14px;
@@ -285,7 +438,7 @@ h2 {
     }
   }
 }
-#news {
+#news  {
   box-shadow: 0px -1px 0px 0px rgba(214, 211, 211, 1);
   padding-top: 20px;
   margin-top: 40px;
@@ -307,6 +460,15 @@ h2 {
     }
   }
 }
+#news>.flex_wrap {
+    @media screen and (max-width: 670px) {
+        & {
+            flex-direction: column;
+            align-items: center;
+
+        }
+    }
+}
 .news_date {
   font-size: 14px;
   line-height: 16px;
@@ -324,6 +486,11 @@ h2 {
 .news_item {
   height: 170px;
   cursor: pointer;
+  @media screen and (max-width: 670px) {
+    & {
+        width: 70%;
+    }
+}
   &:hover {
     box-shadow: 0px 14px 24px rgba(0, 0, 0, 0.05), 0px -1px 0px #1ab0ce;
     .news_content {
@@ -337,6 +504,11 @@ h2 {
   position: absolute;
   right: 1%;
   top: -70px;
+  @media screen and (max-width: 1200px) {
+    & {
+      display: none;
+    }
+  }
 }
 footer {
   padding: 15px 0;
@@ -345,18 +517,81 @@ footer {
   box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.05);
   height: 120px;
   position: relative;
+  .tel {
+    @media screen and (max-width: 450px) {
+        & {
+            font-size: 12px;
+
+        }
+    }
+  }
   .flex_wrap {
     & > div {
       width: 28%;
     }
+
+    > :nth-child(1) {
+    @media screen and (min-width: 451px) and (max-width: 670px) {
+        & {
+          width: 50%;
+        }
+        img {
+    width: 210px;
+    padding-top: 15px;
+        }
+      }
+      @media screen and (max-width: 450px) {
+        & {
+            width: 30%;
+          }
+          img {
+      width: 150px;
+      padding-top: 15px;
+          }
+    }
+    }
+    > :nth-child(2) {
+        
+        @media screen and (max-width: 1200px) {
+          & {
+            display: none;
+          }
+        }
+      }
     > :nth-child(3) {
       padding-left: 25px;
+      
     }
     > :last-child {
       width: 23%;
       text-align: right;
+      @media screen and (max-width: 1200px) {
+        & {
+          width: 50%;
+          padding-top: 20px;
+        }
+      }
+      @media screen and (max-width: 450px) {
+        & {
+            width: 70%;
+
+        }
+    }
+      
       img {
         padding-left: 15px;
+        @media screen and (min-width: 451px) and (max-width: 1200px) {
+            & {
+                padding-left: 5px;
+            }
+          }
+          @media screen and (max-width: 450px) {
+            & {
+                padding-left: 5px;
+                height: 17px;
+    
+            }
+        }
       }
       span {
         font-weight: normal;
@@ -365,6 +600,7 @@ footer {
         text-transform: uppercase;
         font-family: "Cuprum", sans-serif;
         color: #3a4047;
+        
       }
     }
   }
@@ -372,6 +608,12 @@ footer {
     font-size: 14px;
 
     color: #3a4047;
+    @media screen and (max-width: 450px) {
+        & {
+            font-size: 10px;
+
+        }
+    }
   }
 }
 #nav_footer {
@@ -379,6 +621,11 @@ footer {
   flex-direction: column;
   flex-wrap: wrap;
   height: 125px;
+  @media screen and (max-width: 1200px) {
+    & {
+      display: none;
+    }
+  }
 }
 .nav_footer {
   font-size: 14px;
@@ -386,6 +633,14 @@ footer {
   text-decoration-line: underline;
   color: #3a4047;
   display: inline-block;
+  
+    @media screen and (max-width: 450px) {
+        & {
+            font-size: 12px;
+
+        
+    }
+  }
   &:hover {
     color: #1ab0ce;
   }
@@ -400,7 +655,6 @@ footer {
       right: -35px;
       display: block;
       z-index: 10;
-     
     }
   }
 }
