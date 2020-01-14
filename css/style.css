@@ -315,7 +315,8 @@ body {
   margin: 0 auto; }
 
 .flex_wrap {
-  display: flex; }
+  display: flex;
+  justify-content: space-between; }
 
 .underline {
   text-decoration: underline; }
@@ -450,12 +451,12 @@ nav {
     line-height: 67px;
     margin: 0px;
     padding-top: 153px;
-    color: #FFFFFF; }
+    color: #ffffff; }
   #main_banner h2 {
     font-size: 24px;
     line-height: 28px;
     font-weight: 500;
-    color: #FFFFFF; }
+    color: #ffffff; }
   #main_banner a {
     display: block;
     margin: 0 auto;
@@ -467,4 +468,95 @@ nav {
     padding-top: 15px;
     background-color: #1ab0ce;
     border-radius: 2px;
-    color: #FFFFFF; }
+    color: #ffffff; }
+    #main_banner a:hover {
+      box-shadow: 0px 0px 7px 0px rgba(249, 242, 242, 0.81); }
+
+h2 {
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  font-weight: 500;
+  color: #3a4047; }
+
+#about_us h3 {
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  font-weight: 500;
+  color: #3a4047; }
+
+#about_us p {
+  font-size: 14px;
+  line-height: 16px;
+  text-align: justify;
+  color: #3a4047; }
+
+.products {
+  height: 291px;
+  width: 32%;
+  border: 1px solid #dce1e6;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05); }
+  .products img {
+    margin: 25px; }
+
+.catalog {
+  width: 70%; }
+  .catalog h3 {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #3a4047; }
+
+.catalog_item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 250px; }
+  .catalog_item a {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #3a4047;
+    display: inline-block; }
+    .catalog_item a:hover {
+      color: #1ab0ce; }
+
+#news {
+  box-shadow: 0px -1px 0px 0px #d6d3d3;
+  padding-top: 20px;
+  margin-top: 40px; }
+  #news > a {
+    display: block;
+    margin: 0 auto;
+    width: 190px;
+    height: 25px;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    padding-top: 7px;
+    color: #1ab0ce;
+    border-radius: 2px;
+    border: 1px solid #1ab0ce; }
+    #news > a:hover {
+      box-shadow: 0px 0px 5px 0px #1ab0ce; }
+
+.news_date {
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: #bec7d1; }
+
+.news_content {
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #3a4047; }
+
+.news_item {
+  height: 170px;
+  cursor: pointer; }
+  .news_item:hover {
+    box-shadow: 0px 14px 24px rgba(0, 0, 0, 0.05), 0px -1px 0px #1ab0ce; }
+    .news_item:hover .news_content {
+      text-decoration-line: underline;
+      color: #1ab0ce; }
