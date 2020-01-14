@@ -348,6 +348,19 @@ header > .flex_wrap {
   header > .flex_wrap > :nth-child(5) {
     width: 5%; }
 
+#show_phones_header {
+  position: relative; }
+  #show_phones_header:hover #phones_header {
+    position: absolute;
+    top: -25px;
+    right: -32px;
+    display: block;
+    z-index: 10; }
+
+#phones_header {
+  position: absolute;
+  display: none; }
+
 .tel {
   font-size: 16px;
   line-height: 19px;
@@ -596,11 +609,11 @@ footer {
       font-size: 11px;
       line-height: 13px;
       text-transform: uppercase;
-      font-family: 'Cuprum', sans-serif;
-      color: #3A4047; }
+      font-family: "Cuprum", sans-serif;
+      color: #3a4047; }
   footer p {
     font-size: 14px;
-    color: #3A4047; }
+    color: #3a4047; }
 
 #nav_footer {
   display: flex;
@@ -616,3 +629,16 @@ footer {
   display: inline-block; }
   .nav_footer:hover {
     color: #1ab0ce; }
+
+#show_phones_footer {
+  position: relative; }
+  #show_phones_footer:hover #phones_footer {
+    position: absolute;
+    bottom: -15px;
+    right: -35px;
+    display: block;
+    z-index: 10; }
+
+#phones_footer {
+  position: absolute;
+  display: none; }

@@ -1,5 +1,5 @@
 @import "_normalize.scss";
-@import url('https://fonts.googleapis.com/css?family=Cuprum&display=swap&subset=cyrillic');
+@import url("https://fonts.googleapis.com/css?family=Cuprum&display=swap&subset=cyrillic");
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
@@ -47,7 +47,23 @@ header > .flex_wrap {
     width: 5%;
   }
 }
-
+#show_phones_header {
+  position: relative;
+  &:hover {
+    #phones_header {
+      position: absolute;
+      top: -25px;
+      right: -32px;
+      display: block;
+      z-index: 10;
+      
+    }
+  }
+}
+#phones_header {
+  position: absolute;
+  display: none;
+}
 .tel {
   font-size: 16px;
   line-height: 19px;
@@ -185,29 +201,27 @@ nav {
     font-weight: 500;
     color: #ffffff;
   }
-  
 }
 #button_main_banner {
-    display: block;
-    margin: 0 auto;
-    width: 200px;
-    height: 33px;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-    padding-top: 15px;
-    background-color: #1ab0ce;
-    border-radius: 2px;
-    color: #ffffff;
-    &:hover {
-      box-shadow: 0px 0px 7px 0px rgba(249, 242, 242, 0.81);
-    }
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 33px;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  padding-top: 15px;
+  background-color: #1ab0ce;
+  border-radius: 2px;
+  color: #ffffff;
+  &:hover {
+    box-shadow: 0px 0px 7px 0px rgba(249, 242, 242, 0.81);
   }
+}
 #call_me_banner {
-    position: absolute;
-    right: 1%;
-    bottom: -77px;
-
+  position: absolute;
+  right: 1%;
+  bottom: -77px;
 }
 h2 {
   font-size: 36px;
@@ -275,7 +289,7 @@ h2 {
   box-shadow: 0px -1px 0px 0px rgba(214, 211, 211, 1);
   padding-top: 20px;
   margin-top: 40px;
-  >a {
+  > a {
     display: block;
     margin: 0 auto;
     margin-top: 40px;
@@ -289,7 +303,7 @@ h2 {
     border-radius: 2px;
     border: 1px solid #1ab0ce;
     &:hover {
-      box-shadow: 0px 0px 5px 0px rgba(26, 176, 206, 1);;
+      box-shadow: 0px 0px 5px 0px rgba(26, 176, 206, 1);
     }
   }
 }
@@ -318,70 +332,79 @@ h2 {
       color: #1ab0ce;
     }
   }
-  
 }
 #call_me_footer {
-    position: absolute;
-    right: 1%;
-    top: -70px;
+  position: absolute;
+  right: 1%;
+  top: -70px;
 }
 footer {
-    padding: 15px 0;
-    margin-top: 50px;
-    background-color: rgb(240, 240, 240);
-box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.05);
-height: 120px;
-position: relative;
-.flex_wrap {
-    &>div {
-    width: 28%;
+  padding: 15px 0;
+  margin-top: 50px;
+  background-color: rgb(240, 240, 240);
+  box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.05);
+  height: 120px;
+  position: relative;
+  .flex_wrap {
+    & > div {
+      width: 28%;
     }
-    >:nth-child(3) 
-    
-    {
-        padding-left: 25px;
+    > :nth-child(3) {
+      padding-left: 25px;
     }
-    >:last-child {
-        width: 23%;
-        text-align: right;
-        img {
-            padding-left: 15px;
-        }
-        span {
-            font-weight: normal;
-font-size: 11px;
-line-height: 13px;
-text-transform: uppercase;
-font-family: 'Cuprum', sans-serif;
-color: #3A4047;
-        }
+    > :last-child {
+      width: 23%;
+      text-align: right;
+      img {
+        padding-left: 15px;
+      }
+      span {
+        font-weight: normal;
+        font-size: 11px;
+        line-height: 13px;
+        text-transform: uppercase;
+        font-family: "Cuprum", sans-serif;
+        color: #3a4047;
+      }
     }
-    
-
-}
-p {
+  }
+  p {
     font-size: 14px;
 
-
-color: #3A4047;
-}
+    color: #3a4047;
+  }
 }
 #nav_footer {
-    display: flex;
+  display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   height: 125px;
-
-
- 
 }
 .nav_footer {
-    font-size: 14px;
-    margin: 8px 0;
-    text-decoration-line: underline;
-    color: #3a4047;
-    display: inline-block;
-    &:hover {
-      color: #1ab0ce;
+  font-size: 14px;
+  margin: 8px 0;
+  text-decoration-line: underline;
+  color: #3a4047;
+  display: inline-block;
+  &:hover {
+    color: #1ab0ce;
+  }
+}
+
+#show_phones_footer {
+  position: relative;
+  &:hover {
+    #phones_footer {
+      position: absolute;
+      bottom: -15px;
+      right: -35px;
+      display: block;
+      z-index: 10;
+     
     }
   }
+}
+#phones_footer {
+  position: absolute;
+  display: none;
+}
