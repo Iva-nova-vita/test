@@ -316,7 +316,9 @@ body {
   margin: 0 auto; }
 
 .flex_wrap {
+  display: -webkit-box;
   display: flex;
+  -webkit-box-pack: justify;
   justify-content: space-between; }
 
 .underline {
@@ -329,6 +331,7 @@ header {
       height: 85px; } }
 
 header > .flex_wrap {
+  -webkit-box-align: center;
   align-items: center; }
   @media screen and (min-width: 451px) and (max-width: 670px) {
     header > .flex_wrap > :nth-child(1) {
@@ -532,7 +535,7 @@ nav {
       top: 18px; }
 
 #main_banner {
-  background-image: url(../images/Rectangle.png);
+  background-image: url(../images/Rectangle.jpg);
   height: 500px;
   text-align: center;
   background-position: top;
@@ -597,7 +600,10 @@ h2 {
 
 @media screen and (max-width: 670px) {
   #products > .flex_wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     flex-direction: column;
+    -webkit-box-align: center;
     align-items: center; } }
 
 .products {
@@ -625,7 +631,10 @@ h2 {
     color: #3a4047; }
 
 .catalog_item {
+  display: -webkit-box;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-direction: column;
   flex-wrap: wrap;
   height: 250px; }
@@ -659,7 +668,10 @@ h2 {
 
 @media screen and (max-width: 670px) {
   #news > .flex_wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     flex-direction: column;
+    -webkit-box-align: center;
     align-items: center; } }
 
 .news_date {
@@ -683,6 +695,7 @@ h2 {
   .news_item:hover {
     box-shadow: 0px 14px 24px rgba(0, 0, 0, 0.05), 0px -1px 0px #1ab0ce; }
     .news_item:hover .news_content {
+      -webkit-text-decoration-line: underline;
       text-decoration-line: underline;
       color: #1ab0ce; }
 
@@ -757,7 +770,10 @@ footer {
         font-size: 10px; } }
 
 #nav_footer {
+  display: -webkit-box;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-direction: column;
   flex-wrap: wrap;
   height: 125px; }
@@ -768,6 +784,7 @@ footer {
 .nav_footer {
   font-size: 14px;
   margin: 8px 0;
+  -webkit-text-decoration-line: underline;
   text-decoration-line: underline;
   color: #3a4047;
   display: inline-block; }
