@@ -5,6 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css?family=Cuprum&display=swap&subset=cyrillic");
 html {
   line-height: 1.15;
   /* 1 */
@@ -445,7 +446,8 @@ nav {
   background-image: url(../images/Rectangle.png);
   height: 500px;
   text-align: center;
-  background-position: top; }
+  background-position: top;
+  position: relative; }
   #main_banner h1 {
     font-size: 57px;
     line-height: 67px;
@@ -457,20 +459,26 @@ nav {
     line-height: 28px;
     font-weight: 500;
     color: #ffffff; }
-  #main_banner a {
-    display: block;
-    margin: 0 auto;
-    width: 200px;
-    height: 33px;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-    padding-top: 15px;
-    background-color: #1ab0ce;
-    border-radius: 2px;
-    color: #ffffff; }
-    #main_banner a:hover {
-      box-shadow: 0px 0px 7px 0px rgba(249, 242, 242, 0.81); }
+
+#button_main_banner {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 33px;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  padding-top: 15px;
+  background-color: #1ab0ce;
+  border-radius: 2px;
+  color: #ffffff; }
+  #button_main_banner:hover {
+    box-shadow: 0px 0px 7px 0px rgba(249, 242, 242, 0.81); }
+
+#call_me_banner {
+  position: absolute;
+  right: 1%;
+  bottom: -77px; }
 
 h2 {
   font-size: 36px;
@@ -528,6 +536,7 @@ h2 {
   #news > a {
     display: block;
     margin: 0 auto;
+    margin-top: 40px;
     width: 190px;
     height: 25px;
     font-size: 14px;
@@ -560,3 +569,50 @@ h2 {
     .news_item:hover .news_content {
       text-decoration-line: underline;
       color: #1ab0ce; }
+
+#call_me_footer {
+  position: absolute;
+  right: 1%;
+  top: -70px; }
+
+footer {
+  padding: 15px 0;
+  margin-top: 50px;
+  background-color: #f0f0f0;
+  box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.05);
+  height: 120px;
+  position: relative; }
+  footer .flex_wrap > div {
+    width: 28%; }
+  footer .flex_wrap > :nth-child(3) {
+    padding-left: 25px; }
+  footer .flex_wrap > :last-child {
+    width: 23%;
+    text-align: right; }
+    footer .flex_wrap > :last-child img {
+      padding-left: 15px; }
+    footer .flex_wrap > :last-child span {
+      font-weight: normal;
+      font-size: 11px;
+      line-height: 13px;
+      text-transform: uppercase;
+      font-family: 'Cuprum', sans-serif;
+      color: #3A4047; }
+  footer p {
+    font-size: 14px;
+    color: #3A4047; }
+
+#nav_footer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 125px; }
+
+.nav_footer {
+  font-size: 14px;
+  margin: 8px 0;
+  text-decoration-line: underline;
+  color: #3a4047;
+  display: inline-block; }
+  .nav_footer:hover {
+    color: #1ab0ce; }

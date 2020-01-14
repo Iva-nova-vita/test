@@ -1,4 +1,5 @@
 @import "_normalize.scss";
+@import url('https://fonts.googleapis.com/css?family=Cuprum&display=swap&subset=cyrillic');
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
@@ -170,6 +171,7 @@ nav {
   height: 500px;
   text-align: center;
   background-position: top;
+  position: relative;
   h1 {
     font-size: 57px;
     line-height: 67px;
@@ -183,7 +185,9 @@ nav {
     font-weight: 500;
     color: #ffffff;
   }
-  a {
+  
+}
+#button_main_banner {
     display: block;
     margin: 0 auto;
     width: 200px;
@@ -199,6 +203,11 @@ nav {
       box-shadow: 0px 0px 7px 0px rgba(249, 242, 242, 0.81);
     }
   }
+#call_me_banner {
+    position: absolute;
+    right: 1%;
+    bottom: -77px;
+
 }
 h2 {
   font-size: 36px;
@@ -269,6 +278,7 @@ h2 {
   >a {
     display: block;
     margin: 0 auto;
+    margin-top: 40px;
     width: 190px;
     height: 25px;
     font-size: 14px;
@@ -310,3 +320,68 @@ h2 {
   }
   
 }
+#call_me_footer {
+    position: absolute;
+    right: 1%;
+    top: -70px;
+}
+footer {
+    padding: 15px 0;
+    margin-top: 50px;
+    background-color: rgb(240, 240, 240);
+box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.05);
+height: 120px;
+position: relative;
+.flex_wrap {
+    &>div {
+    width: 28%;
+    }
+    >:nth-child(3) 
+    
+    {
+        padding-left: 25px;
+    }
+    >:last-child {
+        width: 23%;
+        text-align: right;
+        img {
+            padding-left: 15px;
+        }
+        span {
+            font-weight: normal;
+font-size: 11px;
+line-height: 13px;
+text-transform: uppercase;
+font-family: 'Cuprum', sans-serif;
+color: #3A4047;
+        }
+    }
+    
+
+}
+p {
+    font-size: 14px;
+
+
+color: #3A4047;
+}
+}
+#nav_footer {
+    display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 125px;
+
+
+ 
+}
+.nav_footer {
+    font-size: 14px;
+    margin: 8px 0;
+    text-decoration-line: underline;
+    color: #3a4047;
+    display: inline-block;
+    &:hover {
+      color: #1ab0ce;
+    }
+  }
